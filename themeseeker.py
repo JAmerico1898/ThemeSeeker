@@ -263,9 +263,12 @@ Based on these trends, suggest 5 compelling lecture themes that would resonate s
 Consider that this age group typically has these characteristics: {age_characteristics.get(age_group, "")}.
 
 For each theme:
-1. Provide a catchy title
+1. Provide a catchy title that reflects both current trends and the philosophical approach
 2. Write a short description (2-3 sentences)
 3. Explain why this theme would resonate with this specific age group
+4. Briefly note how it connects to the philosophical context
+5. Outline a 30-minute lecture based on the theme.
+
 
 Format your response as a numbered list with the title in bold, followed by the description and reasoning.
 """
