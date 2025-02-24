@@ -57,7 +57,6 @@ with st.sidebar:
     <div class="entry clr" itemprop="text">
         <h3>Rosacruz Áurea | LECTORIUM ROSICRUCIANUM</h3>
         <p>A Rosacruz Áurea é uma Escola iniciática contemporânea, dedicada à transformação da consciência e da vida do ser humano atual.</p>
-        <p>Fundada na Holanda há aproximadamente 100 anos, está presente em todos os continentes e em mais de 60 países.</p>
         <p>A fonte do conhecimento da Rosacruz Áurea é a própria Sabedoria Universal, manifestada em todos os tempos, culturas e povos.</p>
         <p>A Rosacruz Áurea dirige-se ao ser humano buscador, oferecendo-lhe elementos para que ele encontre em si mesmo suas respostas e as converta em seu próprio caminho de transformação. Estes elementos também se encontram em seu símbolo: ponto central, triângulo, quadrado e círculo. Juntos, eles representam em todos os níveis, macrocósmico, cósmico ou microcósmico, um símbolo universal da criação divina.</p>
         <p>A consciência humana é prisioneira de seu próprio egocentrismo. Esse estado de consciência nunca será a base do processo de iniciação. Aqueles que desejam seguir o caminho da iniciação devem superar a si mesmos, pois aqueles que se superam tornam-se capazes de verdadeiramente amar e servir a humanidade e o mundo.</p>
