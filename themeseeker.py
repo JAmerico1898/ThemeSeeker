@@ -60,11 +60,10 @@ with st.sidebar:
         <p>Fundada na Holanda há aproximadamente 100 anos, está presente em todos os continentes e em mais de 60 países.</p>
         <p>A fonte do conhecimento da Rosacruz Áurea é a própria Sabedoria Universal, manifestada em todos os tempos, culturas e povos.</p>
         <p>A Rosacruz Áurea dirige-se ao ser humano buscador, oferecendo-lhe elementos para que ele encontre em si mesmo suas respostas e as converta em seu próprio caminho de transformação. Estes elementos também se encontram em seu símbolo: ponto central, triângulo, quadrado e círculo. Juntos, eles representam em todos os níveis, macrocósmico, cósmico ou microcósmico, um símbolo universal da criação divina.</p>
-        <p>O mundo enfrenta uma crise de liderança, reflexo da falência de uma consciência incapaz de responder aos desafios atuais. O modelo de vida baseado no egocentrismo se esgotou. No entanto, a transformação ainda é possível - e começa dentro de cada um. A verdadeira transformação começa no mundo interior, onde reside a essência mais profunda do ser.</p>
         <p>A consciência humana é prisioneira de seu próprio egocentrismo. Esse estado de consciência nunca será a base do processo de iniciação. Aqueles que desejam seguir o caminho da iniciação devem superar a si mesmos, pois aqueles que se superam tornam-se capazes de verdadeiramente amar e servir a humanidade e o mundo.</p>
         <p>O Caminho da Iniciação tem diferentes aspectos: 1. Autoconhecimento: tornar-se consciente do seu próprio egocentrismo; 2. Conexão: estabelecer a conexão inicial e consciente com o Ser Real e superar o egocentrismo; 3. Nova Consciência: através dessa conexão inicial, transformar o pensamento, o sentimento e a ação, permitindo o surgimento de uma nova consciência;</p>
         <p>4. Consciência Espiritual: por meio de um trabalho contínuo, a nova consciência se desenvolve e amadurece, unindo-se plenamente ao Ser Real; 5. Transmutação: a consciência espiritual desencadeia uma transformação energética dos veículos da personalidade, focando em seus aspectos mais sutis; 6. Nova Vitalidade: a transformação energética caminha para uma transformação orgânica, resultando em uma nova e total energia vital;</p>
-        <p>7. Reintegração: reintegrado ao universo, o novo ser humano torna-se um servo do mundo e da humanidade. O que é a Jornada do Herói senão uma busca interior pela libertação do egocentrismo, guiada pela Singularidade do Espírito que está no mais interior do ser humano? Como transcender o ego, conectar-se à essência divina e transformar a consciência e a vida?</p>
+        <p>7. Reintegração: reintegrado ao universo, o novo ser humano torna-se um servo do mundo e da humanidade. </p>
     </div>
 </body>
 </html>
@@ -250,7 +249,7 @@ For each theme:
 2. Write a short description (2-3 sentences)
 3. Explain why this theme would resonate with this specific age group
 4. Briefly note how it connects to the philosophical context
-5. Outline the structure of a 30-minute lecture based on the theme.
+5. Outline a 30-minute lecture based on the theme.
 
 Format your response as a numbered list with the title in bold, followed by the description and reasoning.
 """
