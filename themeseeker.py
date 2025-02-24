@@ -250,7 +250,7 @@ For each theme:
 2. Write a short description (2-3 sentences)
 3. Explain why this theme would resonate with this specific age group
 4. Briefly note how it connects to the philosophical context
-5. Outline the structure of a 30-minute lecture based on the theme, including: Introduction, Body Development, and Conclusion.
+5. Outline the structure of a 30-minute lecture based on the theme.
 
 Format your response as a numbered list with the title in bold, followed by the description and reasoning.
 """
