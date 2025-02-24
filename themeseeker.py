@@ -59,9 +59,12 @@ with st.sidebar:
         <p>A Rosacruz Áurea é uma Escola iniciática contemporânea, dedicada à transformação da consciência e da vida do ser humano atual.</p>
         <p>Fundada na Holanda há aproximadamente 100 anos, está presente em todos os continentes e em mais de 60 países.</p>
         <p>A fonte do conhecimento da Rosacruz Áurea é a própria Sabedoria Universal, manifestada em todos os tempos, culturas e povos.</p>
-        <p>A Rosacruz Áurea dirige-se ao ser humano buscador, oferecendo-lhe elementos para que ele encontre em si mesmo suas respostas e as converta em seu próprio caminho de transformação. Estes elementos também se encontram em seu símbolo: ponto central, triângulo, quadrado e círculo. Juntos, eles representam em todos os níveis – macrocósmico, cósmico ou microcósmico – um símbolo universal da criação divina.</p>
+        <p>A Rosacruz Áurea dirige-se ao ser humano buscador, oferecendo-lhe elementos para que ele encontre em si mesmo suas respostas e as converta em seu próprio caminho de transformação. Estes elementos também se encontram em seu símbolo: ponto central, triângulo, quadrado e círculo. Juntos, eles representam em todos os níveis, macrocósmico, cósmico ou microcósmico, um símbolo universal da criação divina.</p>
         <p>O mundo enfrenta uma crise de liderança, reflexo da falência de uma consciência incapaz de responder aos desafios atuais. O modelo de vida baseado no egocentrismo se esgotou. No entanto, a transformação ainda é possível - e começa dentro de cada um. A verdadeira transformação começa no mundo interior, onde reside a essência mais profunda do ser.</p>
-        <p>O que é a Jornada do Herói senão uma busca interior pela libertação do egocentrismo, guiada pela Singularidade do Espírito que está no mais interior do ser humano? Como transcender o ego, conectar-se à essência divina e transformar a consciência e a vida?</p>
+        <p>A consciência humana é prisioneira de seu próprio egocentrismo. Esse estado de consciência nunca será a base do processo de iniciação. Aqueles que desejam seguir o caminho da iniciação devem superar a si mesmos, pois aqueles que se superam tornam-se capazes de verdadeiramente amar e servir a humanidade e o mundo.</p>
+        <p>O Caminho da Iniciação tem diferentes aspectos: 1. Autoconhecimento: tornar-se consciente do seu próprio egocentrismo; 2. Conexão: estabelecer a conexão inicial e consciente com o Ser Real e superar o egocentrismo; 3. Nova Consciência: através dessa conexão inicial, transformar o pensamento, o sentimento e a ação, permitindo o surgimento de uma nova consciência;</p>
+        <p>4. Consciência Espiritual: por meio de um trabalho contínuo, a nova consciência se desenvolve e amadurece, unindo-se plenamente ao Ser Real; 5. Transmutação: a consciência espiritual desencadeia uma transformação energética dos veículos da personalidade, focando em seus aspectos mais sutis; 6. Nova Vitalidade: a transformação energética caminha para uma transformação orgânica, resultando em uma nova e total energia vital;</p>
+        <p>7. Reintegração: reintegrado ao universo, o novo ser humano torna-se um servo do mundo e da humanidade. O que é a Jornada do Herói senão uma busca interior pela libertação do egocentrismo, guiada pela Singularidade do Espírito que está no mais interior do ser humano? Como transcender o ego, conectar-se à essência divina e transformar a consciência e a vida?</p>
     </div>
 </body>
 </html>
@@ -90,7 +93,7 @@ with st.sidebar:
         
         # Show a sample of the extracted text
         with st.expander("Preview extracted text"):
-            st.write(cleaned_text[:500] + "..." if len(cleaned_text) > 500 else cleaned_text)
+            st.write(cleaned_text[:2700] + "..." if len(cleaned_text) > 2700 else cleaned_text)
             
     except Exception as e:
         st.error(f"Error processing philosophy context: {str(e)}")
@@ -189,6 +192,8 @@ def generate_video_context(title, description):
         context = "Afterlife exploration"
     elif re.search(r'science|physics|quantum', title.lower() + brief_desc.lower()):
         context = "Science and spirituality"
+    elif re.search(r'gnosticism|gnostic|consciousness|awareness', title.lower() + brief_desc.lower()):
+        context = "Gnosticism"
     else:
         context = "General spiritual content"
     
@@ -235,7 +240,7 @@ The philosophical school has the following context, which should guide your sugg
 {philosophy_context}
 ----
 
-Based on these trends and the philosophical context, suggest 5 compelling lecture themes that would resonate specifically with people aged {age_group} years. 
+Based on these trends and the philosophical context, suggest 10 compelling lecture themes that would resonate specifically with people aged {age_group} years. 
 Consider that this age group typically has these characteristics: {age_characteristics.get(age_group, "")}.
 
 Make sure your suggested themes align with the philosophical approach described in the context.
@@ -245,6 +250,7 @@ For each theme:
 2. Write a short description (2-3 sentences)
 3. Explain why this theme would resonate with this specific age group
 4. Briefly note how it connects to the philosophical context
+5. Outline the structure of a 30-minute lecture based on the theme, including: Introduction, Body Development, and Conclusion.
 
 Format your response as a numbered list with the title in bold, followed by the description and reasoning.
 """
@@ -375,8 +381,8 @@ with tab2:
         context_length = len(st.session_state['philosophy_context_cleaned'])
         st.success(f"✅ Philosophy context loaded ({context_length} characters)")
         with st.expander("View loaded philosophical context"):
-            st.write(st.session_state['philosophy_context_cleaned'][:1000] + "..." 
-                    if context_length > 1000 else st.session_state['philosophy_context_cleaned'])
+            st.write(st.session_state['philosophy_context_cleaned'][:2700] + "..." 
+                    if context_length > 2700 else st.session_state['philosophy_context_cleaned'])
     else:
         st.warning("⚠️ No philosophical context loaded. Upload an HTML file in the sidebar to provide context.")
     
