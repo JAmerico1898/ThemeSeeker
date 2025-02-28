@@ -197,12 +197,56 @@ def generate_video_context(title, description):
     
     return context
 
+
+
+
+
 # Function to use Gemini to generate lecture themes
 def generate_lecture_themes(api_key, video_data, age_group):
     try:
-        # Configure the Gemini API
+        # Configure the Gemini API - using the latest API version
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-pro')
+        
+        # First, list available models to find the correct one
+        try:
+            models = genai.list_models()
+            available_models = [model.name for model in models]
+            st.session_state['available_models'] = available_models  # Store for debugging
+            
+            # Try to find the best model to use
+            gemini_model = None
+            # Specifically look for gemini-1.5-flash as recommended in the error message
+            gemini_model = None
+            
+            # First try to find gemini-1.5-flash specifically
+            for model_name in available_models:
+                if 'gemini-1.5-flash' in model_name.lower():
+                    gemini_model = model_name
+                    break
+            
+            # If not found, try any gemini-1.5 model
+            if not gemini_model:
+                for model_name in available_models:
+                    if 'gemini-1.5' in model_name.lower():
+                        gemini_model = model_name
+                        break
+            
+            # Last resort, try any gemini model
+            if not gemini_model:
+                for model_name in available_models:
+                    if 'gemini' in model_name.lower():
+                        gemini_model = model_name
+                        break
+            
+            if not gemini_model:
+                return "No Gemini models available. Available models: " + ", ".join(available_models)
+                
+        except Exception as list_error:
+            # If listing models fails, try the recommended model directly
+            gemini_model = 'gemini-1.5-flash'  # Use the specifically recommended model
+        
+        # Initialize the model with the found or default name
+        model = genai.GenerativeModel(gemini_model)
         
         # Prepare prompt with video titles and contexts
         titles_context = "\n".join([f"- {video['title']} ({video['context']})" for video in video_data])
@@ -269,7 +313,6 @@ For each theme:
 4. Briefly note how it connects to the philosophical context
 5. Outline a 30-minute lecture based on the theme.
 
-
 Format your response as a numbered list with the title in bold, followed by the description and reasoning.
 """
 
@@ -279,6 +322,8 @@ Format your response as a numbered list with the title in bold, followed by the 
     
     except Exception as e:
         return f"Error generating lecture themes: {str(e)}"
+
+
 
 # Main app layout
 tab1, tab2, tab3 = st.tabs(["Mine YouTube Videos", "Lecture Theme Generator", "About"])
