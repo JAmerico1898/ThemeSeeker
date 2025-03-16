@@ -215,19 +215,19 @@ def generate_lecture_themes(api_key, video_data, age_group):
             
             # Try to find the best model to use
             gemini_model = None
-            # Specifically look for gemini-1.5-flash as recommended in the error message
+            # Specifically look for gemini-2.0-flash as recommended in the error message
             gemini_model = None
             
-            # First try to find gemini-1.5-flash specifically
+            # First try to find gemini-2.0-flash specifically
             for model_name in available_models:
-                if 'gemini-1.5-flash' in model_name.lower():
+                if 'gemini-2.0-flash' in model_name.lower():
                     gemini_model = model_name
                     break
             
-            # If not found, try any gemini-1.5 model
+            # If not found, try any gemini-2.0 model
             if not gemini_model:
                 for model_name in available_models:
-                    if 'gemini-1.5' in model_name.lower():
+                    if 'gemini-2.0' in model_name.lower():
                         gemini_model = model_name
                         break
             
@@ -243,7 +243,7 @@ def generate_lecture_themes(api_key, video_data, age_group):
                 
         except Exception as list_error:
             # If listing models fails, try the recommended model directly
-            gemini_model = 'gemini-1.5-flash'  # Use the specifically recommended model
+            gemini_model = 'gemini-2.0-flash'  # Use the specifically recommended model
         
         # Initialize the model with the found or default name
         model = genai.GenerativeModel(gemini_model)
