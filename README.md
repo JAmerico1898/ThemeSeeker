@@ -1,99 +1,128 @@
-Spirituality YouTube Trend Analyzer
-A Streamlit application that helps philosophical and spiritual educators identify trending topics on YouTube and generate age-appropriate lecture content based on current interests in spirituality.
+# Spirituality YouTube Trend Analyzer
 
-Spirituality YouTube Trend Analyzer
+A Streamlit application that empowers philosophical and spiritual educators to identify trending spirituality topics on YouTube and generate age-appropriate lecture content and documents in both English and Portuguese, based on current interest and philosophical alignment.
 
-Features
-YouTube Mining: Connect to YouTube's API to find the most-viewed videos on spirituality from three different time periods (1 week, 1 month, 6 months)
-Content Analysis: Each video is automatically categorized and contextualized to identify its spiritual domain or approach
-Philosophical Context: Incorporates the philosophy of Rosacruz Áurea to ensure generated content aligns with the school's approach
-Theme Generation: Leverages Google's Gemini AI to analyze trending content and suggest lecture themes
-Age-Specific Content: Tailors lecture suggestions to different age groups (20-30, 30-40, 40-50, 50-60, 60+)
-Installation
-Prerequisites
-Python 3.8 or higher
-A YouTube Data API key
-A Google Gemini API key
-Setup
-Clone this repository:
+---
 
-git clone https://github.com/yourusername/spirituality-youtube-analyzer.git
-cd spirituality-youtube-analyzer
-Create and activate a virtual environment:
+## ✨ Features
 
-python -m venv venv
+- **YouTube Mining**: Connects to YouTube's API to find the most-viewed spirituality-related videos across three timeframes: 1 week, 1 month, and 6 months.
+- **Content Categorization**: Automatically classifies videos into spiritual domains like mindfulness, religious traditions, consciousness, and more.
+- **Philosophical Context**: Integrates teachings from *Rosacruz Áurea* to ensure content alignment with its spiritual worldview.
+- **Theme Generation**: Uses Google's Gemini AI to propose lecture themes that resonate with different age groups and current video trends.
+- **Age-Specific Insights**: Suggests tailored themes for various demographics (20-30, 30-40, 40-50, 50-60, 60+).
+- **Multilingual Support**: Automatically translates generated themes into **Portuguese**.
+- **Document Generation**: Generates professional Word documents (in English or Portuguese) for selected themes, with images and formatted content ready to print or share.
 
-# On Windows
-venv\Scripts\activate
+---
 
-# On macOS/Linux
-source venv/bin/activate
-Install the required dependencies:
+## 🛠️ Installation
 
-pip install -r requirements.txt
-Set up your API keys as environment variables:
+### Prerequisites
 
-On Windows:
+- Python 3.8 or higher  
+- YouTube Data API key  
+- Google Gemini API key
 
-set YOUTUBE_API_KEY=your_youtube_api_key_here
-set GEMINI_API_KEY=your_gemini_api_key_here
-On macOS/Linux:
+### Setup Instructions
 
-export YOUTUBE_API_KEY=your_youtube_api_key_here
-export GEMINI_API_KEY=your_gemini_api_key_here
-Usage
-Run the application:
+1. Clone the repository:
 
-streamlit run app.py
-Access the web interface at http://localhost:8501
+   ```bash
+   git clone https://github.com/yourusername/spirituality-youtube-analyzer.git
+   cd spirituality-youtube-analyzer
+   ```
 
-Set your search parameters in the sidebar
+2. Create and activate a virtual environment:
 
-Mine trending spirituality videos from your desired time periods
+   **Windows:**
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate
+   ```
 
-Generate lecture themes by selecting:
+   **macOS/Linux:**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
 
-A data source (Last Week, Last Month, Last 6 Months, or Combined)
-A target age group (20-30, 30-40, 40-50, 50-60, 60+)
-How It Works
-YouTube Mining Process
-The application uses the YouTube Data API to search for videos based on spirituality-related keywords, then orders them by view count within the specified time period. For each video, it retrieves:
+3. Install dependencies:
 
-Title and description
-View count, likes, and comments
-Channel information
-Thumbnail images
-Content Categorization
-Videos are automatically categorized into spiritual contexts such as:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Meditation/Mindfulness
-Eastern philosophy
-Various religious traditions
-Consciousness exploration
-Science and spirituality
-General spiritual content
-Lecture Theme Generation
-The Gemini AI model processes:
+4. Set up your API keys as environment variables:
 
-Trending video titles and their contexts
-The philosophical approach of Rosacruz Áurea
-Characteristics of the selected age group
-It then generates lecture themes that:
+   **Windows:**
+   ```cmd
+   set YOUTUBE_API_KEY=your_youtube_api_key
+   set GEMINI_API_KEY=your_gemini_api_key
+   ```
 
-Resonate with current interests
-Align with the philosophical approach
-Address the specific needs and perspectives of the target age group
-API Quotas and Limits
-YouTube Data API has a free daily quota of 10,000 units. Each search request uses approximately 100 units.
-Google Gemini API has pricing based on input and output tokens. Check the current pricing on Google's website.
-Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
+   **macOS/Linux:**
+   ```bash
+   export YOUTUBE_API_KEY=your_youtube_api_key
+   export GEMINI_API_KEY=your_gemini_api_key
+   ```
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
 
-Acknowledgements
-Rosacruz Áurea for their philosophical context
-YouTube Data API
-Google Gemini AI
-Streamlit framework
+## 🚀 Usage
+
+Start the app:
+
+```bash
+streamlit run themeseeker.py
+```
+
+Then open [http://localhost:8501](http://localhost:8501) in your browser.
+
+---
+
+## 📚 How It Works
+
+1. **Search YouTube Trends**  
+   Set your search terms and time window (last week, month, or 6 months). The app fetches and ranks videos by view count.
+
+2. **Analyze & Categorize**  
+   Videos are automatically tagged into spiritual categories using heuristics and NLP.
+
+3. **Generate Lecture Themes**  
+   Select your desired age group and let Gemini AI generate lecture themes. All themes are aligned with the Rosacruz Áurea philosophical context.
+
+4. **Translate to Portuguese**  
+   Themes are automatically translated into natural, idiomatic Portuguese for Brazilian or Portuguese-speaking audiences.
+
+5. **Export Professional Documents**  
+   Generate `.docx` documents with title, teaser, 500-word explanation, and a themed image — ready to distribute as lecture materials.
+
+---
+
+## ⏳ API Usage Notes
+
+- **YouTube Data API**: Free daily quota of 10,000 units. Each search request ~100 units.
+- **Google Gemini API**: Pricing based on input/output tokens. Visit [Google Cloud pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing) for details.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Fork the repository, create a new branch, and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgements
+
+- [Rosacruz Áurea](https://www.rosacruzaurea.org.br/) for philosophical inspiration  
+- [YouTube Data API](https://developers.google.com/youtube/v3)  
+- [Google Gemini AI](https://ai.google.dev/gemini-api)  
+- [Streamlit](https://streamlit.io) for the interactive app framework  
+- [Unsplash](https://unsplash.com/) for thematic images  
